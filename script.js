@@ -192,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     mediaPlayer.addEventListener('timeupdate', function() {
         writeProgressAndDuration();
+        bufferingStatus.style.opacity=0;
     });
 
     mediaPlayer.addEventListener("progress", function() {
@@ -200,7 +201,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     mediaPlayer.addEventListener("canplay", function() {
         writeProgressAndDuration();
-        bufferingStatus.style.opacity=0;
     });
 
     seekBar.addEventListener('click', function(e) {
