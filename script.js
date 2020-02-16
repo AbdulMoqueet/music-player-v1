@@ -108,7 +108,8 @@ var mediaPlayer,
     songListDuration,
     toast,
     currentSong=0,
-    accentColor;
+    accentColor,
+    bufferingStatus;
 
 document.addEventListener("DOMContentLoaded", function(){   
     var cards = "";
@@ -171,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function(){
     bottomSongName = document.getElementById('bottom-song-name');
     bottomSingerName = document.getElementById('bottom-singer-name');
     songListDuration = document.getElementsByClassName('song-list__duration');
+    bufferingStatus = document.getElementById('bufferingStatus');
     toast = document.getElementById("toast");
     var myStyle = getComputedStyle(document.body);
     accentColor = myStyle.getPropertyValue('--top-bg-color');
@@ -193,11 +195,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     mediaPlayer.addEventListener("progress", function() {
-        timeDuration.textContent="Buffering...";
+        bufferingStatus.textContent="Buffering...";
     });
 
     mediaPlayer.addEventListener("canplay", function() {
         writeProgressAndDuration();
+        bufferingStatus.textContent="";
     });
 
     seekBar.addEventListener('click', function(e) {
