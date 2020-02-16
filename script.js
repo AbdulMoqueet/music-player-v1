@@ -1,3 +1,13 @@
+/*
+* Design Inspired By:
+* https://in.pinterest.com/pin/586171707737215905/
+*
+* Date of posting: 16-Feb-2020
+* Created by: Abdul Moqueet 
+*
+*
+*/
+
 var songs = [
     {
         name:"Sing Me To Sleep",
@@ -110,7 +120,8 @@ var mediaPlayer,
     currentSong=0,
     accentColor,
     bufferingStatus,
-    isReady = false;
+    isReady = false,
+    songCards;
 
 document.addEventListener("DOMContentLoaded", function(){   
     var cards = "";
@@ -173,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function(){
     bottomSongName = document.getElementById('bottom-song-name');
     bottomSingerName = document.getElementById('bottom-singer-name');
     songListDuration = document.getElementsByClassName('song-list__duration');
+    songCards = document.getElementsByClassName("top__card-holder__card");
     bufferingStatus = document.getElementById('bufferingStatus');
     toast = document.getElementById("toast");
     var myStyle = getComputedStyle(document.body);
@@ -187,6 +199,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }else{
             mediaPlayer.play();
             songListDuration[currentSong].style.color = accentColor;
+            songCards[currentSong].style.color = accentColor;
             playBtn.innerHTML = "pause";
             isPlaying=true;
         }
@@ -281,7 +294,9 @@ function playSong(songId){
     mediaPlayer.load();
     songListDuration[currentSong].textContent = songs[currentSong].duration;
     songListDuration[currentSong].style.color = "#717171";
+    songCards[currentSong].style.color = "#fff";
     songListDuration[songId].style.color = accentColor;
+    songCards[songId].style.color = accentColor;
     currentSong = songId;
     playBtn.innerHTML = "pause";
     isPlaying=true;
