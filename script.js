@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function(){
         playBtn.innerHTML = "replay";
         isPlaying=false;
     });
-    
+
     toast.addEventListener("webkitAnimationEnd", function(){
         toast.style.animation="none";
     });
@@ -268,15 +268,15 @@ window.onload = function(){
 function showToast(){
     toast.style.animation = "fade 2s";
     toast.style.anmationFillMode = "forwards";
-    
+
 }
 
 function playSong(songId){
     isReady = true;
-    
+
     if(songId == songs.length-1)
         return;
-    
+
     if(currentSong == songId){
         if(isPlaying){
             mediaPlayer.pause();
@@ -287,6 +287,10 @@ function playSong(songId){
             isPlaying = true;
             playBtn.innerHTML = "pause";
         }
+
+        songListDuration[songId].style.color = accentColor;
+        songCards[songId].style.color = accentColor;
+
         return;
     }
 
@@ -295,6 +299,7 @@ function playSong(songId){
     songListDuration[currentSong].textContent = songs[currentSong].duration;
     songListDuration[currentSong].style.color = "#717171";
     songCards[currentSong].style.color = "#fff";
+
     songListDuration[songId].style.color = accentColor;
     songCards[songId].style.color = accentColor;
     currentSong = songId;
