@@ -379,7 +379,6 @@ body{
 .not-supported{
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     height: 100vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -387,6 +386,7 @@ body{
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    display: none;
 }
 
 @media only screen and (max-height: 400px) {
@@ -398,6 +398,10 @@ body{
 @media only screen and (max-height: 350px) {
     .main-container{
         display: none;
+    }
+    
+    .not-supported{
+        display: flex;
     }
 }
 
