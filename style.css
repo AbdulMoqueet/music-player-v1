@@ -37,6 +37,7 @@ body{
 
 .by{
     margin-top: 10vh;
+    font-size: 0.9em;
 }
 
 .left-pannel{
@@ -284,6 +285,7 @@ display: none;
 
 .bottom__progress__status{
     margin-top: 0.2rem;
+    font-size: 0.9em;
     opacity: 0;
 }
 

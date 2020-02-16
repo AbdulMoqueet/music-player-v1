@@ -195,12 +195,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     mediaPlayer.addEventListener("progress", function() {
-        bufferingStatus.textContent="Buffering...";
+        bufferingStatus.style.opacity=1;
     });
 
     mediaPlayer.addEventListener("canplay", function() {
         writeProgressAndDuration();
-        bufferingStatus.textContent="";
+        bufferingStatus.style.opacity=0;
     });
 
     seekBar.addEventListener('click', function(e) {
