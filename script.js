@@ -261,6 +261,9 @@ function showToast(){
 function playSong(songId){
     isReady = true;
     
+    if(songId == songs.length-1)
+        return;
+    
     if(currentSong == songId){
         if(isPlaying){
             mediaPlayer.pause();

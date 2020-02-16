@@ -136,6 +136,7 @@ body{
     color: #fff;
     overflow: hidden;
     position: relative;
+    user-select: none;
 }
 
 .top__card-holder__card__song-info__singer{
@@ -144,6 +145,7 @@ body{
        text-overflow: ellipsis;
     overflow:hidden;
     white-space: nowrap;
+    user-select: none;
 }
 
 .card__play--btn{
@@ -229,12 +231,14 @@ body{
     padding-top: 0.4rem;
     font-size: 0.8em;
     color: grey;
+    user-select: none;
 }
 
 .song-list__duration{
     padding-right: 2rem;
     color: #717171;
     font-size: 0.9em;
+    user-select: none;
 }
 
 /*--Bottom--*/
@@ -287,12 +291,14 @@ body{
     padding-right: 1rem;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .bottom__song-info__singer-name{
     font-size: 0.8em;
     padding-top: 0.3rem;
     color: #9b9a9a;
+    user-select: none;
 }
 
 .bottom__play-button{
@@ -300,6 +306,7 @@ body{
     padding-right: 2rem;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .bottom__progress{
@@ -338,6 +345,7 @@ body{
     margin-top: 0.2rem;
     font-size: 0.9em;
     opacity: 0;
+    user-select: none;
 }
 
 #toast{
@@ -353,6 +361,7 @@ body{
             justify-content: center;
     pointer-events: none;
     opacity: 0;
+    user-select: none;
 }
 
 #toast p{
