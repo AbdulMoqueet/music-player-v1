@@ -109,7 +109,8 @@ var mediaPlayer,
     toast,
     currentSong=0,
     accentColor,
-    bufferingStatus;
+    bufferingStatus,
+    isReady = false;
 
 document.addEventListener("DOMContentLoaded", function(){   
     var cards = "";
@@ -178,6 +179,7 @@ document.addEventListener("DOMContentLoaded", function(){
     accentColor = myStyle.getPropertyValue('--top-bg-color');
 
     playBtn.addEventListener('click', function() {
+        isReady=true;
         if(isPlaying){
             mediaPlayer.pause();
             playBtn.innerHTML = "play_arrow";
@@ -196,7 +198,8 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     mediaPlayer.addEventListener("progress", function() {
-        bufferingStatus.style.opacity=1;
+        if(isReady)
+            bufferingStatus.style.opacity=1;
     });
 
     mediaPlayer.addEventListener("canplay", function() {
@@ -256,7 +259,8 @@ function showToast(){
 }
 
 function playSong(songId){
-
+    isReady = true;
+    
     if(currentSong == songId){
         if(isPlaying){
             mediaPlayer.pause();

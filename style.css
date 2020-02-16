@@ -97,11 +97,9 @@ body{
 }
 
 
-/*
 .top__cards-holder::-webkit-scrollbar {
-display: none;
+    display: none;
 }
-*/
 
 
 .top__card-holder__card{
