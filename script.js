@@ -92,7 +92,7 @@ var songs = [
     {
         name:"Legends Never Die",
         singer:"Alan Walker",
-        duration:"02:51",
+        duration:"02:45",
         url:"songs/Legends_Never_Die.mp3",
         albumArt:"images/Legends_Never_Die.jpg"
     },
