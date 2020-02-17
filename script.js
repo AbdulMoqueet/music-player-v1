@@ -88,6 +88,14 @@ var songs = [
         url:"songs/Heart_Attack.mp3",
         albumArt:"images/Heart_Attack.jpg"
     },
+    
+    {
+        name:"Legends Never Die",
+        singer:"Alan Walker",
+        duration:"02:51",
+        url:"songs/Legends_Never_Die.mp3",
+        albumArt:"images/Legends_Never_Die.jpg"
+    },
 
     {
         name:"On My Way",
